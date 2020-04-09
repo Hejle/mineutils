@@ -31,7 +31,7 @@ function moveFarming()
         end
         if data.name == "minecraft:smooth_stone" then
             turningItemsIn = true
-            harvest = false
+            harvesting = false
             return
         end
     end
