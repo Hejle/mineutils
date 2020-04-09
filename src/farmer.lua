@@ -7,50 +7,6 @@ local turningItemsIn = false
 local storageFull = false
 turtle.select(1)
 
-function harvest()
-    local success, data = turtle.inspectDown()
-    if success then
-        if data.name == "minecraft:water" then
-            turtle.turnLeft()
-            turtle.place()
-            turtle.suck()
-            turtle.suck()
-            turtle.turnRight()
-            turtle.suck()
-            turtle.suck()
-            return true
-        else
-            return false
-        end
-    else
-        return false
-    end
-end
-
-function moveFarming()
-    local success, data = turtle.inspectDown()
-    if success then
-        if data.name == "minecraft:cobblestone" then
-            turtle.turnLeft()
-        end
-        if data.name == "minecraft:smooth_stone" then
-            return false
-        end
-    end
-
-    if not turtle.detect() then
-        if turned then
-            harvest()
-            turned = false
-        end
-        turtle.forward()
-    else
-        turtle.turnRight()
-        turned = true
-        return moveFarming()
-    end
-end
-
 function returnItems()
     turtle.forward()
     turtle.forward()
@@ -90,7 +46,6 @@ while true do
             print("Storage full")
             print("Turning off")
             os.shutdown()
-            return
         end
         print("Going to sleep")
         print("Harvesting in 200 seconds")
