@@ -1,6 +1,6 @@
 print("starting")
 
-if not turtle.detect() do
+if not turtle.detect() then
     turtle.forward()
 end
 
@@ -9,7 +9,7 @@ turtle.turnRight()
 
 while not turtle.detectDown() do
     turtle.down()
-    if turtle.compare() do
+    if turtle.compare() then
         turtle.place()
     end
 end
