@@ -6,7 +6,7 @@ turtle.select(1)
 function harvest()
     local success, data = turtle.inspectDown()
     if success then
-        if data.name == minecraft:water then
+        if data.name == "minecraft:water" then
             turtle.turnLeft()
             turtle.place()
             turtle.suck()
@@ -26,10 +26,10 @@ end
 function moveFarming()
     local success, data = turtle.inspectDown()
     if success then
-        if data.name == minecraft:cobblestone then
+        if data.name == "minecraft:cobblestone" then
             turtle.turnLeft()
         end
-        if data.name = minecraft:cobblestone then
+        if data.name == "minecraft:spruce_planks" then
             return false
         end
     end
@@ -49,7 +49,7 @@ end
 function returnItems()
 
 end
-
+turtle.forward()
 for i=1, 20 do
     moveFarming()
     harvest()
