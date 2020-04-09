@@ -93,8 +93,14 @@ while true do
         end
         turningItemsIn = false
         print("Going to sleep")
-        print("Harvesting in 10 seconds")
-        os.sleep(10)
+        print("Harvesting in 4 minuts")
+        os.sleep(60)
+        print("Harvesting in 3 minuts")
+        os.sleep(60)
+        print("Harvesting in 2 minuts")
+        os.sleep(60)
+        print("Harvesting in 1 minuts")
+        os.sleep(60)
         harvesting = true
         turtle.forward()
     end
