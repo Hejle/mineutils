@@ -18,12 +18,7 @@ function harvest()
             turtle.turnRight()
             turtle.suck()
             turtle.suck()
-            return true
-        else
-            return false
         end
-    else
-        return false
     end
 end
 
@@ -34,7 +29,8 @@ function moveFarming()
             turtle.turnLeft()
         end
         if data.name == "minecraft:smooth_stone" then
-            return false
+            turningItemsIn = true
+            return
         end
     end
 
@@ -82,9 +78,7 @@ function returnItems()
     turtle.forward()
 end
 
---turtle.forward()
-harvesting = false
-turningItemsIn = true
+turtle.forward()
 while true do
     if harvesting then
         moveFarming()
@@ -97,11 +91,11 @@ while true do
             print("Turning off")
             os.shutdown()
         end
-        print("Going to sleep")
-        print("Harvesting in 200 seconds")
-        os.sleep(200)
-        turtle.forward()
         turningItemsIn = false
+        print("Going to sleep")
+        print("Harvesting in 10 seconds")
+        os.sleep(10)
         harvesting = true
+        turtle.forward()
     end
 end
