@@ -30,6 +30,7 @@ function moveFarming()
         end
         if data.name == "minecraft:smooth_stone" then
             turningItemsIn = true
+            print("Is on smooth stone")
             return
         end
     end
