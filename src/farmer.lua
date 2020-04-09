@@ -59,13 +59,19 @@ function returnItems()
         turtle.forward()
     end
     for i=2, 16 do
+        print("Dropping")
         if not storageFull then
-            local success = turtle.dropDown(i)
-            if not success then
-                storageFull = true
+            turtle.select(i)
+            if turtle.getItemCount() > 0 then
+                local success = turtle.dropDown()
+                print(success)
+                if not success then
+                    storageFull = true
+                end
             end
         end
     end
+    tutle.select(1) -- Equipmentslot
     turtle.turnRight()
     turtle.turnRight()
     for i=1, 6 do
