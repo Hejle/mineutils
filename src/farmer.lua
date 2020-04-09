@@ -1,4 +1,5 @@
 print("starting")
+-- Made by Hejle
 local lastslot = 16
 local error = false
 local turned = false
