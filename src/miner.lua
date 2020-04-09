@@ -10,14 +10,13 @@ function checkselectedslot()
         if slot == lastslot then
             return false
         else
-            slot++
+            slot = slot + 1
             turtle.select(slot)
             return checkselectedslot()
         end
 
     end
 end
-
 
 if not turtle.detect() then
     turtle.forward()
@@ -31,7 +30,7 @@ while not turtle.detectDown() and notReturning do
     if checkselectedslot() then
         turtle.down()
         turtle.place()
-        startpos--
+        startpos = startpos - 1
     else
         notReturning = false
     end
