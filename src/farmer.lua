@@ -71,7 +71,7 @@ function returnItems()
             end
         end
     end
-    turle.select(1) -- Equipmentslot
+    turtle.select(1) -- Equipmentslot
     turtle.turnRight()
     turtle.turnRight()
     for i=1, 6 do
