@@ -18,6 +18,8 @@ function checkselectedslot()
     end
 end
 
+turtle.select(1)
+
 if not turtle.detect() then
     turtle.forward()
     turtle.forward()
