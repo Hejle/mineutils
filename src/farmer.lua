@@ -1,6 +1,7 @@
 print("starting")
 local lastslot = 16
 local error = false
+local turned = false
 turtle.select(1)
 
 function harvest()
@@ -35,9 +36,14 @@ function moveFarming()
     end
 
     if not turtle.detect() then
+        if turned then
+            harvest()
+            turned = false
+        end
         turtle.forward()
     else
         turtle.turnRight()
+        turned = true
         return moveFarming()
     end
 end
