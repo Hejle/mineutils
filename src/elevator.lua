@@ -11,11 +11,11 @@ function moveToTop()
     end
 end
 
-function moveToBottom() {
+function moveToBottom()
     while not turtle.detectDown()
         turtle.down()
     end
-}
+end
 
 
 while true do
