@@ -8,12 +8,14 @@ function moveToTop()
                 running = false
             end
         end
+        os.sleep(1)
     end
 end
 
 function moveToBottom()
-    while not turtle.detectDown()
+    while not turtle.detectDown() do
         turtle.down()
+        os.sleep(1)
     end
 end
 
@@ -24,4 +26,5 @@ while true do
         os.sleep(5)
         moveToBottom()
     end
-    os.sleep(2
+    os.sleep(2)
+end
