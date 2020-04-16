@@ -50,9 +50,12 @@ function moveFarming()
 end
 
 function returnItems()
+    turtle.up()
     turtle.forward()
     turtle.forward()
-    turtle.turnRight()
+    turtle.turnleft()
+    turtle.forward()
+    turtle.forward()
     for i=1, 6 do
         turtle.forward()
     end
@@ -72,12 +75,12 @@ function returnItems()
     turtle.select(1) -- Equipmentslot
     turtle.turnRight()
     turtle.turnRight()
-    for i=1, 6 do
-        turtle.forward()
-    end
-    turtle.turnLeft()
     turtle.forward()
     turtle.forward()
+    turtle.turnRight()
+    turtle.forward()
+    turtle.forward()
+    turtle.down()
 end
 
 turtle.forward()
