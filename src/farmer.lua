@@ -53,7 +53,7 @@ function returnItems()
     turtle.up()
     turtle.forward()
     turtle.forward()
-    turtle.turnleft()
+    turtle.turnLeft()
     turtle.forward()
     turtle.forward()
     for i=1, 6 do
